@@ -56,8 +56,8 @@ body {
 }
 
 .leash {
-  background: rgb(204, 84, 87);
-  border: 2px solid rgb(134, 59, 61);
+  background: pink ;
+  border: 2px solid black;
   height: 50px;
   margin: 0 auto;
   width: 120px;
@@ -79,7 +79,7 @@ body {
 
 .hole {
   background: #fff;
-  border: 2px solid rgb(134, 59, 61);
+  border: 2px solid black ;
   border-radius: 100%;
   height: 20px;
   margin: 0 auto 50px;
@@ -113,13 +113,18 @@ body {
 }
 
 .btn.start {
-  background: #5fca5f;
+  background: pink;
+  color: black;
+  padding : 2px;
+  border: 1px solid black ;
 }
 .btn.stop {
   background: #f14949;
 }
 .btn.reset {
-  background: #908e8e;
+  background: black;
+  padding: 2px;
+  border : 2px solid pink ; 
 }
 .btn.split {
   background: #0851ab;

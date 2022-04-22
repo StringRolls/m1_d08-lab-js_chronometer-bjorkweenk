@@ -1,34 +1,45 @@
+
 class Chronometer {
   constructor() {
-    // ... your code goes here
+    this.currentTime = 0;
+    this.intervalId = null; 
   }
 
   start(callback) {
-    // ... your code goes here
+    this.intervalId = setInterval(()=> {
+      this.currentTime++;
+    }, 1 * 1000)
+
   }
 
-  getMinutes() {
-    // ... your code goes here
+  getMintues() {
+   return Math.floor(this.currentTime/60)
   }
 
   getSeconds() {
-    // ... your code goes here
+    return this.currentTime%60
   }
 
-  computeTwoDigitNumber(value) {
-    // ... your code goes here
-  }
+  computeTwoDigitNumber(number) {
 
-  stop() {
-    // ... your code goes here
-  }
+    if(number.toString().length >= 2) return number.toString();
+    else return '0' + number;
+  };
+
+stop(){
+  clearInterval(this.intervalID);
+}
 
   reset() {
-    // ... your code goes here
+    this.currentTime = 0;
   }
 
   split() {
-    // ... your code goes here
+    let minutes = computeTwoDigitNumber(this.getMintues)
+    let seconds = this.computeTwoDigitNumber(this.getSeconds)
+    
+    let totalTime = minutes + "." + seconds 
+    return totalTime 
   }
 }
 
@@ -37,3 +48,18 @@ class Chronometer {
 if (typeof module !== 'undefined') {
   module.exports = Chronometer;
 }
+
+/*
+  let button = (document.getElementsByClassName(("start-button");
+  button.addEventListener(("click", buttonStart);
+
+   function buttonStart() {
+      if (this.innerText === "start") {
+        this.innerText = "stop";
+      } else {
+        this.innerText = "start";
+      } 
+      element.classList.toggle("buttonStart")
+
+      console.log(buttonStart)
+*/
